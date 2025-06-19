@@ -1,14 +1,16 @@
 using Dapper;
 using Microsoft.Data.SqlClient;
-using DexMinimumApi.Configuration;
+using System.Data;
 
 namespace DexMinimumApi.Context;
 public class DapperContext : IDapperContext
     {
         private readonly string _connectionString;
-        public DapperContext()
+        private readonly IConfiguration _configuration;
+       public DapperContext(IConfiguration configuration)
         {
-            _connectionString = AppSettings.Instance.SqlConnection;
+          _configuration = configuration;
+          _connectionString = _configuration.GetConnectionString("SqlConnection"); ;
         }
 
         public async Task<int> ExecuteAsync(string sql, object entity)
@@ -42,4 +44,14 @@ public class DapperContext : IDapperContext
                 return await connection.QueryFirstAsync(sql, entity);
             }
         }
-    }
+
+       public async Task<int> ExecuteStoreProcedure(string sql, object entity)
+       {
+          using (var connection = new SqlConnection(_connectionString))
+          {
+            return await connection.ExecuteScalarAsync<int>(sql, entity, commandType: CommandType.StoredProcedure);
+          }
+       }
+
+
+}

@@ -10,4 +10,6 @@ namespace DexMinimumApi.Context;
 
         Task<T> QueryFirstAsync<T>(string sql, object entity);
 
+        Task<int> ExecuteStoreProcedure(string sql, object entity);
+
     }

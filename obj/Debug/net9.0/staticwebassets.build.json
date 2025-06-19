@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Hlqlm53IElfCzZWaEHAht3KSG5KvuPgpW4uCD5CVB2k=",
+  "Source": "DexMinimumApi",
+  "BasePath": "_content/DexMinimumApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
