@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DexMinimumApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59fe027d2f452ac88138a26d874161c79337fd7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d0fa27009f29b383bb78f101fda31957a872757")]
 [assembly: System.Reflection.AssemblyProductAttribute("DexMinimumApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DexMinimumApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
